@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS-Position</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .header {
+        position: fixed;
+        top: 0;
+        display: flex;
+        z-index: 999;
+        background-color: aquamarine;
+        width: 100%;
+        height: 60px;
+      }
+      .home {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        height: 30px;
+        width: 100px;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+      }
+      .about {
+        position: absolute;
+        right: 150px;
+        top: 15px;
+        height: 30px;
+        width: 100px;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+      }
+      .search {
+        position: absolute;
+        left: 150px;
+        top: 15px;
+        height: 30px;
+        width: 300px;
+        background-color: white;
+        justify-content: center;
+        text-align: center;
+      }
+      .container {
+        position: relative;
+        top: 100px;
+        display: flex;
+        margin-top: 35px;
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      .sidebar-left {
+        position: sticky;
+        top: 80px;
+        flex: 0.2;
+        border-radius: 10px;
+        text-align: center;
+        height: fit-content;
+      }
+      .sidebar-left-top {
+        justify-content: center;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 1px solid lightgray;
+        border-bottom: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        background-color: red;
+        height: 200px;
+        padding-bottom: 10px;
+      }
+      .sidebar-left-bootam {
+        text-align: left;
+        padding: 10px;
+        border: 1px solid lightgray;
+        background-color: green;
+        height: 200px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+      .sidebar-right {
+        position: relative;
+        background-color: wheat;
+        flex: 0.2;
+        border-radius: 10px;
+        text-align: center;
+        height: 250px;
+      }
+      .sidebar-right-top {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 18px;
+        position: absolute;
+        top: 50px;
+        left: 15px;
+        margin: 5px;
+        padding: 10px;
+        background-color: red;
+        height: 50px;
+        width: 150px;
+      }
+
+      .post {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 4500px;
+        flex: 0.6;
+        margin: 20px;
+      }
+      .post-one {
+        background-color: black;
+        color: antiquewhite;
+        margin: 30px;
+        padding: 17px;
+        height: 200px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header start-->
+    <div class="header">
+      position= Fixed
+      <div class="about">About</div>
+      <div class="search">search</div>
+      <div class="home">home</div>
+    </div>
+    <!-- header end-->
+    <!-- container start-->
+    <div class="container">
+      <div class="sidebar-left">
+        <div class="sidebar-left-top">position=sticky</div>
+        <div class="sidebar-left-bootam"></div>
+      </div>
+      <div class="post">
+        <div class="post-one">
+          default position of any element is
+          <h2>static</h2>
+        </div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+        <div class="post-one"></div>
+      </div>
+      <div class="sidebar-right">
+        position=relative
+        <div class="sidebar-right-top">position=absolute</div>
+      </div>
+    </div>
+    <!-- container end-->
+  </body>
+</html>
